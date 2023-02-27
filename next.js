@@ -1,19 +1,20 @@
 $(document).ready(function(){
     
     // implementing append function();
-    /* $('#btn1').click(function(){
+    $('#btn1').click(function(){
         $('#p1').append(' Some text appended.'); 
 
         alert("text appended!"); 
         alert($('#p1').text());
-    }); */
+    });
 
     // Appending text into paragraph
     // functions in Jquery
-    /* $('#btn1').click(function(){
+    $('#btn1').click(function(){
         $('#btn3').before('<b>Before</b>');
-    }); */
+    });
 
+    // implementing after() function
     $('#btn1').click(function(){
         $('#btn3').after('<i>After</i>');
     });
@@ -30,3 +31,21 @@ function appendtext() {
     text3.innerHTML = "Text.";
     $("body").append(text1, text2, text3);      // Append the new elements
   }
+
+//  after can take multiple parameters
+function showtext(){
+    var txt1 = "<b>I</b>"; //creating by html
+    var txt2 = $('<i></i>').text('love');   // creating by jQuery
+    var txt3 = document.createElement('b'); //creating by DOM
+    txt3.innerHTML= "jQuery!";
+    $('#btn1').after(txt1, txt2, txt3);  
+}
+
+// before can take multiple parameters
+function showtext(){
+    var txt1 = "<b>Deeksha </b>";       //creating by html
+    var txt2 = $('<b></b>').text("Kulshreshtha ");  // creating by jQuery  
+    var txt3 = document.createElement('b');   //creating by DOM
+    txt3.innerHTML = 'is a good girl.'
+    $("#btn1").before(txt1, txt2, txt3);
+}
