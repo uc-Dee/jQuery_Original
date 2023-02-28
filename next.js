@@ -19,9 +19,18 @@ $(document).ready(function(){
         $('#btn3').after('<i>After</i>');
     });
 
+    // implementing the remove function()
+    $('#btn2').click(function(){
+        $('#btn1').remove(); 
+        alert('Button is removed!'); 
+    })
 
+    // implementing the child function()
+    $('#btn4').click(function(){
+        $('#btn3').empty(); 
+        alert("Empty function is invoked on the button!");
+    })
 });
-
 
 function appendtext() {
     console.log("hello")
@@ -49,3 +58,4 @@ function showtext(){
     txt3.innerHTML = 'is a good girl.'
     $("#btn1").before(txt1, txt2, txt3);
 }
+
